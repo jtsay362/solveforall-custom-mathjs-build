@@ -1,0 +1,19 @@
+{
+  "name": "solveforall-custom-mathjs-build",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Custom built version of Math.js for Solve for All",
+  "repository": "https://github.com/jtsay362/solveforall-custom-mathjs-build",
+  "license": "BSD",
+  "dependencies": {
+    "mathjs" : "2.3.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-uglify": "^1.4.1",
+    "vinyl-buffer" : "^1.0.0",
+    "vinyl-source-stream" : "^1.1.0",
+    "webpack": "^1.8.9"
+  }
+}
