@@ -1,9 +1,10 @@
 var gulp = require('gulp');
 //var browserify = require('browserify');
 var webpack = require('webpack');
-var rename = require('gulp-rename');
 var source = require('vinyl-source-stream');
 var buffer = require('vinyl-buffer');
+var mocha = require('gulp-mocha');
+var rename = require('gulp-rename');
 var uglify = require('gulp-uglify');
 
 var ENTRY = './src/build.js';
@@ -15,14 +16,14 @@ gulp.task('bundle', function (cb) {
     entry: ENTRY,
     output: {
       library: 'math-light',
-      libraryTarget: 'umd',
+      libraryTarget: 'commonjs2',
       path: DIST,
       filename: FILE
     },
     externals: [
       'crypto' // is referenced by decimal.js
     ],
-    cache: true
+    cache: false
   };
 
   var compiler = webpack(webpackConfig);
@@ -47,6 +48,11 @@ gulp.task('uglify', ['bundle'], function () {
       path.basename += '.min';
     }))
     .pipe(gulp.dest(DIST));
+});
+
+gulp.task('test', function () {
+  return gulp.src('test/test.js')
+    .pipe(mocha());  
 });
 
 gulp.task('default', ['uglify']);
