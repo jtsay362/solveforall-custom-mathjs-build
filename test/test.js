@@ -3,7 +3,7 @@ var ml = require('../dist/math-light');
 
 describe('arithmetic', function () {
   it('should evaluate arithmetic expressions', function () {
-    assert.equal(3, ml.eval('1 + 2'));
+    assert.equal(17, ml.eval('1 + 2 * 8'));
   });
 
   it('should evaluate trig expressions', function () {
