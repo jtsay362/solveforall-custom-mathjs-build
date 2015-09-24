@@ -27,6 +27,17 @@ this build creates a CommonJS module by following the way Math.js does its own
 build ([gulpfile.js](https://github.com/josdejong/mathjs/blob/master/gulpfile.js)), except it outputs a CommonJS2
 module instead of an AMD module. You can easily switch back to AMD by modifying gulpfile.js.
 
+To build:
+
+    gulp
+
+which will output math-light.js and math-light.min.js in the dist/ directory.
+Either of these can be used as CommonJS2 modules.
+
+To run tests:
+
+    gulp test
+
 Pull requests that reduce the size of the library without sacrificing too much
 functionality are very welcome! Also let me know if you want some features added
 back in.
