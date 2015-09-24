@@ -10,13 +10,15 @@ var uglify = require('gulp-uglify');
 var ENTRY = './src/build.js';
 var DIST  = './dist';
 var FILE = 'math-light.js';
+// Could be 'amd'
+var MODULE_FORMAT = 'commonjs2';
 
 gulp.task('bundle', function (cb) {
   var webpackConfig = {
     entry: ENTRY,
     output: {
       library: 'math-light',
-      libraryTarget: 'commonjs2',
+      libraryTarget: MODULE_FORMAT,
       path: DIST,
       filename: FILE
     },
@@ -52,7 +54,7 @@ gulp.task('uglify', ['bundle'], function () {
 
 gulp.task('test', function () {
   return gulp.src('test/test.js')
-    .pipe(mocha());  
+    .pipe(mocha());
 });
 
 gulp.task('default', ['uglify']);
