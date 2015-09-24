@@ -3,7 +3,7 @@
 This is a custom build of Math.js that creates the "math-light" module
 available in the [Solve for All Javascript execution environment](https://solveforall.com/docs/developer/javascript_execution).
 The execution environment allows developers to write plugins to the
-[Solve for All]((https://solveforall.com/) answer (search) engine in Javascript,
+[Solve for All](https://solveforall.com/) answer (search) engine in Javascript,
 and by including
 
     const math = require('math-light');
