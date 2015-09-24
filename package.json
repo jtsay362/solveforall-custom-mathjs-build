@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "description": "Custom built version of Math.js for Solve for All",
   "repository": "https://github.com/jtsay362/solveforall-custom-mathjs-build",
-  "license": "BSD",
+  "license": "Apache",
   "dependencies": {
     "mathjs" : "2.3.0"
   },
